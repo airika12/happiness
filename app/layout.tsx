@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
+import { Sidebar } from '@/components/layout/Sidebar';
 import { Toaster } from '@/components/ui/toaster';
 import Script from 'next/script';
 
@@ -21,8 +22,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <Header />
+        <Sidebar />
 
-        <main className="min-h-screen bg-background">
+        <main className="min-h-screen bg-background lg:ml-64">
           {children}
         </main>
 
